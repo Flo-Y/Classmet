@@ -141,7 +141,7 @@ body {
 .school-name-bottom {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--text-dark);
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
 }
@@ -1259,8 +1259,8 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: 2.25fr 1fr 1.75fr;
+    gap: 2rem;
     margin-bottom: 50px;
 }
 
@@ -1280,8 +1280,7 @@ section {
 .footer-logo {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .footer-brand h3 {
@@ -1352,6 +1351,13 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-contact li span {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+    line-height: 1.7;
+}
+
 .footer-contact svg {
     width: 20px;
     height: 20px;
@@ -1389,6 +1395,45 @@ section {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #14b8a6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #0d9488;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.5;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1530,6 +1575,11 @@ section {
     .section-title {
         font-size: 2rem;
     }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1548,5 +1598,10 @@ section {
     .kompetensi-grid,
     .berita-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
