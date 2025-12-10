@@ -1,3 +1,74 @@
+// ===== HERO CAROUSEL =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+let autoPlayInterval;
+
+// Function to show specific slide
+function showSlide(index) {
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+
+    // Add active class to current slide and indicator
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+
+    currentSlide = index;
+}
+
+// Function to go to next slide
+function nextSlide() {
+    let next = (currentSlide + 1) % totalSlides; // Loop back to 0 after last slide
+    showSlide(next);
+}
+
+// Function to go to previous slide
+function prevSlide() {
+    let prev = (currentSlide - 1 + totalSlides) % totalSlides; // Loop back to last slide
+    showSlide(prev);
+}
+
+// Auto-play carousel
+function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 3000); // Change slide every 2 seconds
+}
+
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
+
+// Arrow button click events
+document.getElementById('nextSlide').addEventListener('click', () => {
+    nextSlide();
+    stopAutoPlay();
+    startAutoPlay(); // Restart auto-play
+});
+
+document.getElementById('prevSlide').addEventListener('click', () => {
+    prevSlide();
+    stopAutoPlay();
+    startAutoPlay(); // Restart auto-play
+});
+
+// Indicator click events
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        showSlide(index);
+        stopAutoPlay();
+        startAutoPlay(); // Restart auto-play
+    });
+});
+
+// Start auto-play on page load
+startAutoPlay();
+
+// Pause auto-play on hover
+const heroBanner = document.querySelector('.hero-banner');
+heroBanner.addEventListener('mouseenter', stopAutoPlay);
+heroBanner.addEventListener('mouseleave', startAutoPlay);
+
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');

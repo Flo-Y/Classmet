@@ -73,14 +73,59 @@
 
     <!-- Hero Banner -->
     <section class="hero-banner" id="beranda">
-        <div class="hero-overlay"></div>
+        <!-- Carousel Container -->
+        <div class="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="images/aa1.jpg" alt="Slide 1" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="images/aa2.jpg" alt="Slide 2" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="images/aa3.jpg" alt="Slide 3" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+                <img src="images/aa4.jpg" alt="Slide 4" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content (stays on top) -->
         <div class="hero-content">
             <h1 class="hero-title">Selamat Datang di SMKN 2 MOJOKERTO</h1>
             <p class="hero-subtitle">Membentuk Generasi Unggul, Berkarakter, dan Profesional</p>
             <button class="hero-btn">Jelajahi Lebih Lanjut</button>
         </div>
-        <div class="hero-image">
-            <!-- Placeholder untuk gambar banner -->
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev" id="prevSlide" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-arrow next" id="nextSlide" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
         </div>
     </section>
 
@@ -136,18 +181,20 @@
             </div>
 
             <div class="kompetensi-grid">
+                <!-- 1. Agribisnis Pengolahan Hasil Tani -->
                 <div class="kompetensi-card">
                     <div class="card-image-placeholder">
                         <!-- Placeholder untuk gambar -->
                     </div>
                     <div class="card-content">
-                        <h3>Rekayasa Perangkat Lunak</h3>
+                        <h3>Agribisnis Pengolahan Hasil Tani</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
                         </p>
                         <a href="#" class="card-link">Pelajari Lebih Lanjut →</a>
                     </div>
                 </div>
 
+                <!-- 2. Desain Komunikasi Visual -->
                 <div class="kompetensi-card">
                     <div class="card-image-placeholder">
                         <!-- Placeholder untuk gambar -->
@@ -160,18 +207,7 @@
                     </div>
                 </div>
 
-                <div class="kompetensi-card">
-                    <div class="card-image-placeholder">
-                        <!-- Placeholder untuk gambar -->
-                    </div>
-                    <div class="card-content">
-                        <h3>Layanan Perbankan Syariah</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
-                        </p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut →</a>
-                    </div>
-                </div>
-
+                <!-- 3. Kuliner -->
                 <div class="kompetensi-card">
                     <div class="card-image-placeholder">
                         <!-- Placeholder untuk gambar -->
@@ -184,12 +220,26 @@
                     </div>
                 </div>
 
+                <!-- 4. Layanan Perbankan Syariah -->
                 <div class="kompetensi-card">
                     <div class="card-image-placeholder">
                         <!-- Placeholder untuk gambar -->
                     </div>
                     <div class="card-content">
-                        <h3>Agribisnis Pengolahan Hasil Tani</h3>
+                        <h3>Layanan Perbankan Syariah</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+                        </p>
+                        <a href="#" class="card-link">Pelajari Lebih Lanjut →</a>
+                    </div>
+                </div>
+
+                <!-- 5. Rekayasa Perangkat Lunak -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <!-- Placeholder untuk gambar -->
+                    </div>
+                    <div class="card-content">
+                        <h3>Rekayasa Perangkat Lunak</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
                         </p>
                         <a href="#" class="card-link">Pelajari Lebih Lanjut →</a>
@@ -206,6 +256,7 @@
                 <div class="kepsek-image">
                     <div class="image-placeholder">
                         <!-- Placeholder untuk foto kepala sekolah -->
+                        <img src="images/imageskepsek1.jpeg" alt="Foto Kepala Sekolah">
                     </div>
                     <div class="image-decoration"></div>
                 </div>
@@ -286,6 +337,63 @@
                             <div class="stat-content">
                                 <h4>Tenaga Pendidik</h4>
                                 <p>Guru profesional & berpengalaman</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi Sekolah -->
+    <section class="lokasi-sekolah">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lokasi Sekolah</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Temukan kami di lokasi yang strategis dan mudah dijangkau</p>
+            </div>
+
+            <div class="lokasi-grid">
+                <!-- Foto Gedung Sekolah -->
+                <div class="lokasi-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <!-- Placeholder untuk foto gedung sekolah -->
+                        </div>
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="lokasi-map">
+                    <a href="https://www.google.com/maps/place/SMK+Negeri+2+Kota+Mojokerto/@-7.4655097,112.42611,15.7z/data=!4m6!3m5!1s0x2e78120b57f1e203:0x65ef2d4ecdeb1643!8m2!3d-7.4645961!4d112.4233275!16s%2Fg%2F11bwf8s0_k?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" rel="noopener noreferrer" class="map-link">
+                        <div class="map-frame">
+                            <div class="map-placeholder">
+                                <div class="map-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <h3>Lihat di Google Maps</h3>
+                                <p>Klik untuk membuka lokasi</p>
+                            </div>
+                            <div class="map-overlay">
+                                <span>Buka Peta →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="lokasi-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jl. Contoh Alamat No. 123, Mojokerto, Jawa Timur</p>
                             </div>
                         </div>
                     </div>
