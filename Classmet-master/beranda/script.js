@@ -40,43 +40,57 @@ function stopAutoPlay() {
 }
 
 // Arrow button click events
-document.getElementById('nextSlide').addEventListener('click', () => {
-    nextSlide();
-    stopAutoPlay();
-    startAutoPlay(); // Restart auto-play
-});
-
-document.getElementById('prevSlide').addEventListener('click', () => {
-    prevSlide();
-    stopAutoPlay();
-    startAutoPlay(); // Restart auto-play
-});
-
-// Indicator click events
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        showSlide(index);
+const nextSlideBtn = document.getElementById('nextSlide');
+if (nextSlideBtn) {
+    nextSlideBtn.addEventListener('click', () => {
+        nextSlide();
         stopAutoPlay();
         startAutoPlay(); // Restart auto-play
     });
-});
+}
 
-// Start auto-play on page load
-startAutoPlay();
+const prevSlideBtn = document.getElementById('prevSlide');
+if (prevSlideBtn) {
+    prevSlideBtn.addEventListener('click', () => {
+        prevSlide();
+        stopAutoPlay();
+        startAutoPlay(); // Restart auto-play
+    });
+}
+
+// Indicator click events
+if (indicators.length > 0) {
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+            stopAutoPlay();
+            startAutoPlay(); // Restart auto-play
+        });
+    });
+}
+
+// Start auto-play on page load if slides exist
+if (slides.length > 0) {
+    startAutoPlay();
+}
 
 // Pause auto-play on hover
 const heroBanner = document.querySelector('.hero-banner');
-heroBanner.addEventListener('mouseenter', stopAutoPlay);
-heroBanner.addEventListener('mouseleave', startAutoPlay);
+if (heroBanner) {
+    heroBanner.addEventListener('mouseenter', stopAutoPlay);
+    heroBanner.addEventListener('mouseleave', startAutoPlay);
+}
 
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Dropdown menu functionality for mobile
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
@@ -84,28 +98,32 @@ const navDropdowns = document.querySelectorAll('.nav-dropdown');
 navDropdowns.forEach(dropdown => {
     const dropdownLink = dropdown.querySelector('.nav-link');
 
-    dropdownLink.addEventListener('click', (e) => {
-        // On mobile, toggle dropdown instead of navigating
-        if (window.innerWidth <= 968) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
+    if (dropdownLink) {
+        dropdownLink.addEventListener('click', (e) => {
+            // On mobile, toggle dropdown instead of navigating
+            if (window.innerWidth <= 968) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
 
-            // Close other dropdowns
-            navDropdowns.forEach(otherDropdown => {
-                if (otherDropdown !== dropdown) {
-                    otherDropdown.classList.remove('active');
-                }
-            });
-        }
-    });
+                // Close other dropdowns
+                navDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }
 });
 
 // Close mobile menu when clicking a dropdown item
 const dropdownLinks = document.querySelectorAll('.dropdown-content a');
 dropdownLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (hamburger && navMenu) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
         navDropdowns.forEach(dropdown => {
             dropdown.classList.remove('active');
         });
@@ -116,24 +134,28 @@ dropdownLinks.forEach(link => {
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (hamburger && navMenu) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
     });
 });
 
 // Sticky Shrinking Navbar
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset;
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.pageYOffset;
 
-    // Add 'scrolled' class when scrolled more than 50px
-    if (scrollPosition > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+        // Add 'scrolled' class when scrolled more than 50px
+        if (scrollPosition > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -191,7 +213,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all cards for animation
-const animatedElements = document.querySelectorAll('.kompetensi-card, .berita-card, .visi-card, .misi-card');
+const animatedElements = document.querySelectorAll('.kompetensi-card, .visi-card, .misi-card');
 animatedElements.forEach(element => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(30px)';
@@ -222,124 +244,26 @@ window.addEventListener('load', () => {
 // Back to Top Button
 const backToTopButton = document.getElementById('backToTop');
 
-// Show/hide button based on scroll position
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-});
-
-// Scroll to top when clicked
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (backToTopButton) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
     });
-});
 
-// ===== BERITA CAROUSEL AUTO-LOOP =====
-const initBeritaCarousel = () => {
-    const beritaTrack = document.querySelector('.berita-carousel-track');
-
-    // Clear existing clones if any (to prevent duplication on re-init)
-    // We only want to keep the original cards.
-    // However, since we don't have a reliable way to distinguish originals from clones without marking them,
-    // and this function runs once on load, we assume logic below is fine.
-    // If we re-run this function on resize, we might multiply clones unless we check.
-    // Simplification: Run once on load.
-
-    if (beritaTrack && !beritaTrack.dataset.initialized) {
-        beritaTrack.dataset.initialized = "true";
-        const beritaCards = Array.from(beritaTrack.children);
-
-        // Clone all cards multiple times to ensure seamless loop on wide screens
-        // Cloning 6 times to be safe for very wide screens vs small cards
-        for (let i = 0; i < 6; i++) {
-            beritaCards.forEach(card => {
-                const clone = card.cloneNode(true);
-                beritaTrack.appendChild(clone);
-            });
-        }
-
-        // Carousel auto-scroll variables
-        let currentScroll = 0;
-        let targetScroll = 0;
-        const scrollSpeed = 0.5; // pixel per frame for auto-scroll
-        let isPaused = false;
-
-        let cardWidth = beritaCards[0].offsetWidth;
-        let gap = 35; // must match CSS gap
-        let oneSetWidth = (cardWidth + gap) * beritaCards.length;
-
-        // Recalculate on resize
-        window.addEventListener('resize', () => {
-            cardWidth = beritaCards[0].offsetWidth;
-            oneSetWidth = (cardWidth + gap) * beritaCards.length;
+    // Scroll to top when clicked
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
+}
 
-        // Animation Loop
-        function animate() {
-            // Auto-increment target if not paused
-            if (!isPaused) {
-                targetScroll += scrollSpeed;
-            }
 
-            // Smoothly interpolate current towards target (Lerp)
-            // Factor 0.1 determines smoothness/speed of ease-out
-            currentScroll += (targetScroll - currentScroll) * 0.1;
-
-            // Handle Infinite Wrapping logic
-            // If we have scrolled past one full set, we reset both current and target
-            // to maintain the illusion of seamlessness without visual jumps
-            if (currentScroll >= oneSetWidth) {
-                currentScroll -= oneSetWidth;
-                targetScroll -= oneSetWidth;
-            } else if (currentScroll < 0) {
-                // For reverse scrolling (prev button)
-                currentScroll += oneSetWidth;
-                targetScroll += oneSetWidth;
-            }
-
-            beritaTrack.style.transform = `translateX(-${currentScroll}px)`;
-            requestAnimationFrame(animate);
-        }
-
-        // Pause on hover
-        beritaTrack.addEventListener('mouseenter', () => {
-            isPaused = true;
-        });
-
-        beritaTrack.addEventListener('mouseleave', () => {
-            isPaused = false;
-        });
-
-        // Arrow button handlers with Smooth Target Update
-        const beritaPrevBtn = document.getElementById('beritaPrev');
-        const beritaNextBtn = document.getElementById('beritaNext');
-
-        if (beritaPrevBtn) {
-            beritaPrevBtn.addEventListener('click', () => {
-                // Move target back by one card
-                targetScroll -= (cardWidth + gap);
-            });
-        }
-
-        if (beritaNextBtn) {
-            beritaNextBtn.addEventListener('click', () => {
-                // Move target forward by one card
-                targetScroll += (cardWidth + gap);
-            });
-        }
-
-        // Start animation loop
-        animate();
-    }
-};
-
-// Run initialization when window is fully loaded to ensure styles/dimensions are ready
-window.addEventListener('load', initBeritaCarousel);
 
 console.log('SMKN 2 Mojokerto - Website loaded successfully!');
 
