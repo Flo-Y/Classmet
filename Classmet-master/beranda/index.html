@@ -406,8 +406,9 @@
         </div>
     </section>
 
-    <!-- Berita -->
-    <section class="berita" id="informasi">
+
+    <!-- Berita & Informasi Section -->
+    <section class="news-section" id="berita">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Berita & Informasi Terkini</h2>
@@ -415,108 +416,113 @@
                 <p class="section-subtitle">Update terbaru seputar kegiatan dan prestasi SMKN 2 Mojokerto</p>
             </div>
 
-            <div class="berita-slider-layout">
-                <button class="berita-arrow prev" id="beritaPrev" aria-label="Previous">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <div class="berita-carousel-wrapper">
-                    <div class="berita-carousel-track">
-                        <!-- Berita 1 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">10 Desember 2025</span>
-                                <h3>Lorem Ipsum Dolor Sit Amet Consectetur</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-
-                        <!-- Berita 2 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">8 Desember 2025</span>
-                                <h3>Sed Do Eiusmod Tempor Incididunt</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-
-                        <!-- Berita 3 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">5 Desember 2025</span>
-                                <h3>Ut Labore Et Dolore Magna Aliqua</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-
-                        <!-- Berita 4 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">3 Desember 2025</span>
-                                <h3>Consectetur Adipiscing Elit</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-
-                        <!-- Berita 5 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">1 Desember 2025</span>
-                                <h3>Tempor Incididunt Ut Labore</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-
-                        <!-- Berita 6 -->
-                        <div class="berita-card">
-                            <div class="berita-image-placeholder">
-                                <!-- Placeholder untuk gambar berita -->
-                            </div>
-                            <div class="berita-content">
-                                <span class="berita-date">28 November 2025</span>
-                                <h3>Dolore Magna Aliqua</h3>
-                                <p></p>
-                                <a href="#" class="berita-link">Baca Selengkapnya →</a>
-                            </div>
-                        </div>
-                    </div>
-
+            <!-- Featured News -->
+            <div class="featured-news">
+                <div class="featured-news-image">
+                    <img src="images/aa1.jpg" alt="Featured News">
+                    <div class="featured-overlay"></div>
                 </div>
-                <button class="berita-arrow next" id="beritaNext" aria-label="Next">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+                <div class="featured-content">
+                    <span class="news-category">Prestasi</span>
+                    <span class="news-date">10 Desember 2025</span>
+                    <h2>Siswa SMKN 2 Mojokerto Raih Juara 1 Lomba Inovasi Teknologi Tingkat Nasional</h2>
+                    <p>Tim siswa dari jurusan Rekayasa Perangkat Lunak berhasil meraih juara pertama dalam kompetisi
+                        inovasi teknologi yang diselenggarakan oleh Kementerian Pendidikan. Karya mereka berupa aplikasi
+                        pembelajaran interaktif dinilai sangat inovatif dan bermanfaat.</p>
+                    <a href="#" class="read-more-btn">
+                        Baca Selengkapnya
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="berita-cta">
-                <button class="btn-secondary">Lihat Semua Berita</button>
+            <!-- News List -->
+            <div class="news-list">
+                <!-- News Item 1 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/aa2.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">Kegiatan</span>
+                            <span class="news-date">8 Desember 2025</span>
+                        </div>
+                        <h3>Workshop Digital Marketing untuk Meningkatkan Kompetensi Siswa</h3>
+                        <p>SMKN 2 Mojokerto mengadakan workshop digital marketing yang diikuti oleh siswa jurusan
+                            Perbankan Syariah dan DKV untuk meningkatkan kemampuan pemasaran digital.</p>
+                        <a href="#" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/aa3.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">Pengumuman</span>
+                            <span class="news-date">5 Desember 2025</span>
+                        </div>
+                        <h3>Pendaftaran Prakerin Gelombang 2 Tahun Ajaran 2025/2026</h3>
+                        <p>Dibuka pendaftaran praktek kerja industri gelombang kedua untuk siswa kelas XI. Informasi
+                            lengkap dapat dilihat di pengumuman resmi sekolah.</p>
+                        <a href="#" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/aa4.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">Acara</span>
+                            <span class="news-date">1 Desember 2025</span>
+                        </div>
+                        <h3>Peringatan Hari Guru Nasional dengan Berbagai Kegiatan Menarik</h3>
+                        <p>Seluruh warga sekolah merayakan Hari Guru Nasional dengan serangkaian kegiatan apresiasi
+                            untuk para guru dan tenaga pendidik.</p>
+                        <a href="#" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="news-view-all">
+                <a href="#" class="btn-view-all">
+                    Lihat Semua Berita
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer class="footer" id="kontak">
         <div class="footer-content">
             <div class="container">
