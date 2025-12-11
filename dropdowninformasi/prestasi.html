@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 2 MOJOKERTO - Prestasi</title>
+    <meta name="description" content="Prestasi gemilang siswa dan guru SMKN 2 Mojokerto di berbagai bidang">
+    <link rel="stylesheet" href="../Classmet-master/beranda/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Specific styles for sub-page header */
+        .prestasi-header-container {
+            width: 100%;
+        }
+
+        /* White Spacer to sit behind the fixed navbar initially */
+        .header-spacer {
+            height: 90px;
+            background-color: #ffffff;
+            width: 100%;
+        }
+
+        /* Blue Content Area */
+        .header-content {
+            background: #2563eb;
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Horizontal Card Layout */
+        .prestasi-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 80px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .prestasi-card {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .prestasi-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            /* Minimalist hover */
+        }
+
+        .card-image {
+            width: 25%;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .card-content {
+            width: 75%;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-date {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: auto;
+            align-self: flex-start;
+            transition: gap 0.2s ease;
+        }
+
+        .card-btn:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .prestasi-card {
+                flex-direction: column;
+            }
+
+            .card-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .card-content {
+                width: 100%;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <img src="../Classmet-master/beranda/images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto"
+                        class="logo">
+                </div>
+                <div class="school-name">
+                    <span class="school-name-top">SMK NEGERI 2</span>
+                    <span class="school-name-bottom">KOTA MOJOKERTO</span>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="../Classmet-master/beranda/index.html#beranda" class="nav-link">Beranda</a>
+
+                <div class="nav-dropdown">
+                    <a href="../Classmet-master/beranda/index.html#profil" class="nav-link">Profil Sekolah</a>
+                    <div class="dropdown-content">
+                        <a href="../Classmet-master/beranda/index.html#sejarah">Sejarah</a>
+                        <a href="../Classmet-master/beranda/index.html#fasilitas">Fasilitas Sekolah</a>
+                        <a href="../Classmet-master/beranda/index.html#profil-guru">Profil Guru</a>
+                        <a href="../Classmet-master/beranda/index.html#denah">Denah Sekolah</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <a href="../Classmet-master/beranda/index.html#kompetensi" class="nav-link">Kompetensi Keahlian</a>
+                    <div class="dropdown-content">
+                        <a href="../Classmet-master/beranda/index.html#kompetensi">Agribisnis Pengolahan Hasil Tani</a>
+                        <a href="../Classmet-master/beranda/index.html#kompetensi">Desain Komunikasi Visual</a>
+                        <a href="../Classmet-master/beranda/index.html#kompetensi">Kuliner</a>
+                        <a href="../Classmet-master/beranda/index.html#kompetensi">Layanan Perbankan Syariah</a>
+                        <a href="../Classmet-master/beranda/index.html#kompetensi">Rekayasa Perangkat Lunak</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <a href="../Classmet-master/beranda/index.html#informasi" class="nav-link active">Informasi</a>
+                    <div class="dropdown-content">
+                        <a href="prestasi.html">Prestasi</a>
+                        <a href="../Classmet-master/beranda/index.html#berita">Berita dan Artikel</a>
+                    </div>
+                </div>
+
+                <a href="../Classmet-master/beranda/index.html#kontak" class="nav-link">Kontak</a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header with Spacer -->
+    <div class="prestasi-header-container">
+        <!-- White Spacer -->
+        <div class="header-spacer"></div>
+        <!-- Blue Content -->
+        <div class="header-content">
+            <div class="container">
+                <h1 class="page-title">Prestasi Siswa & Guru</h1>
+                <p class="page-subtitle">Ragam pencapaian membanggakan dari warga SMKN 2 Mojokerto di tingkat regional
+                    hingga nasional.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: Prestasi List (Horizontal Cards) -->
+    <div class="container">
+        <div class="prestasi-list">
+
+            <!-- 1. Lomba Inovasi -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa1.jpg" alt="Juara 1 Inovasi">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>10 Desember 2025</span>
+                    </div>
+                    <h3 class="card-title">Juara 1 Lomba Inovasi Teknologi Tingkat Nasional</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 2. LKS Provinsi -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa2.jpg" alt="LKS Provinsi">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>5 November 2025</span>
+                    </div>
+                    <h3 class="card-title">Medali Emas LKS Tingkat Provinsi Bidang Kuliner</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 3. Olimpiade -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa3.jpg" alt="Olimpiade">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>20 Oktober 2025</span>
+                    </div>
+                    <h3 class="card-title">Juara Umum Olimpiade Akuntansi se-Gerbangkertosusila</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 4. FLS2N -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa4.jpg" alt="FLS2N">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>15 September 2025</span>
+                    </div>
+                    <h3 class="card-title">Juara 2 Desain Poster FLS2N Tingkat Nasional</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 5. Basket -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa1.jpg" alt="Basket">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>10 Agustus 2025</span>
+                    </div>
+                    <h3 class="card-title">Tim Basket Putra Raih Runner Up DBL East Java Series</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 6. Guru -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa2.jpg" alt="Guru">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>2 Mei 2025</span>
+                    </div>
+                    <h3 class="card-title">Guru SMKN 2 Mojokerto Terpilih Sebagai Guru Inspiratif Jatim</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 7. Juara Coding -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa3.jpg" alt="Coding">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>15 April 2025</span>
+                    </div>
+                    <h3 class="card-title">Juara 1 Kompetisi Coding Hackathon Regional</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 8. Lomba Fotografi -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa4.jpg" alt="Fotografi">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>22 Maret 2025</span>
+                    </div>
+                    <h3 class="card-title">Pemenang Kategori Visual Terbaik Lomba Fotografi Pelajar</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 9. Debat Bahasa Inggris -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa1.jpg" alt="Debat">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>10 Februari 2025</span>
+                    </div>
+                    <h3 class="card-title">Best Speaker dalam Debat Bahasa Inggris Tingkat Kota</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- 10. Robotik -->
+            <div class="prestasi-card">
+                <div class="card-image">
+                    <img src="../Classmet-master/beranda/images/aa2.jpg" alt="Robotik">
+                </div>
+                <div class="card-content">
+                    <div class="card-date">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>5 Januari 2025</span>
+                    </div>
+                    <h3 class="card-title">Juara 3 Kompetisi Robotik Pelajar Nasional</h3>
+                    <a href="#" class="card-btn">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="javascript:void(0)" onclick="prevPage()" class="page-link" id="prevBtn">&laquo;</a>
+        <a href="javascript:void(0)" onclick="changePage(1)" class="page-link active" id="btn-1">1</a>
+        <a href="javascript:void(0)" onclick="changePage(2)" class="page-link" id="btn-2">2</a>
+        <a href="javascript:void(0)" onclick="nextPage()" class="page-link" id="nextBtn">&raquo;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="../Classmet-master/beranda/images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto"
+                                class="footer-logo">
+                            <h3>SMKN 2 MOJOKERTO</h3>
+                        </div>
+                        <p class="footer-desc">Menghasilkan lulusan yang kompeten, berakhlak mulia, dan siap bersaing di
+                            dunia kerja global.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Navigasi</h4>
+                        <ul class="footer-links">
+                            <li><a href="../Classmet-master/beranda/index.html#beranda">Beranda</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#profil">Profil</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#kompetensi">Kompetensi Keahlian</a></li>
+                            <li><a href="prestasi.html">Prestasi</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#kontak">Kontak</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Hubungi Kami</h4>
+                        <ul class="contact-info">
+                            <li>Jl. Raya Pulorejo, Kec. Prajurit Kulon, Kota Mojokerto</li>
+                            <li>info@smkn2mojokerto.sch.id</li>
+                            <li>(0321) 123456</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 SMKN 2 Mojokerto. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Classmet-master/beranda/script.js"></script>
+    <script>
+        let currentPage = 1;
+        const totalPages = 2;
+        const itemsPerPage = 5;
+
+        function changePage(pageNum) {
+            if (pageNum < 1 || pageNum > totalPages) return;
+
+            currentPage = pageNum;
+            const cards = document.querySelectorAll('.prestasi-card');
+
+            // Hide all
+            cards.forEach(card => card.style.display = 'none');
+
+            // Show items for current page
+            const start = (pageNum - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            for (let i = start; i < end; i++) {
+                if (cards[i]) cards[i].style.display = 'flex';
+            }
+
+            // Update buttons
+            document.querySelectorAll('.pagination .page-link').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById(`btn-${pageNum}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Scroll to top of list
+            document.querySelector('.prestasi-header-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function prevPage() {
+            changePage(currentPage - 1);
+        }
+
+        function nextPage() {
+            changePage(currentPage + 1);
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            changePage(1);
+        });
+    </script>
+</body>
+
+</html>
