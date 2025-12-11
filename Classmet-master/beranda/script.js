@@ -187,7 +187,14 @@ function highlightNavigation() {
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
+
+                // Highlight "Informasi" when viewing akreditasi, lokasi, or berita sections
+                const informasiSections = ['akreditasi', 'lokasi', 'berita'];
+                if (informasiSections.includes(sectionId)) {
+                    if (link.getAttribute('href') === '#informasi') {
+                        link.classList.add('active');
+                    }
+                } else if (link.getAttribute('href') === `#${sectionId}`) {
                     link.classList.add('active');
                 }
             });
