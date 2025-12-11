@@ -239,4 +239,107 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+// ===== BERITA CAROUSEL AUTO-LOOP =====
+const initBeritaCarousel = () => {
+    const beritaTrack = document.querySelector('.berita-carousel-track');
+
+    // Clear existing clones if any (to prevent duplication on re-init)
+    // We only want to keep the original cards.
+    // However, since we don't have a reliable way to distinguish originals from clones without marking them,
+    // and this function runs once on load, we assume logic below is fine.
+    // If we re-run this function on resize, we might multiply clones unless we check.
+    // Simplification: Run once on load.
+
+    if (beritaTrack && !beritaTrack.dataset.initialized) {
+        beritaTrack.dataset.initialized = "true";
+        const beritaCards = Array.from(beritaTrack.children);
+
+        // Clone all cards multiple times to ensure seamless loop on wide screens
+        // Cloning 6 times to be safe for very wide screens vs small cards
+        for (let i = 0; i < 6; i++) {
+            beritaCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                beritaTrack.appendChild(clone);
+            });
+        }
+
+        // Carousel auto-scroll variables
+        let currentScroll = 0;
+        let targetScroll = 0;
+        const scrollSpeed = 0.5; // pixel per frame for auto-scroll
+        let isPaused = false;
+
+        let cardWidth = beritaCards[0].offsetWidth;
+        let gap = 35; // must match CSS gap
+        let oneSetWidth = (cardWidth + gap) * beritaCards.length;
+
+        // Recalculate on resize
+        window.addEventListener('resize', () => {
+            cardWidth = beritaCards[0].offsetWidth;
+            oneSetWidth = (cardWidth + gap) * beritaCards.length;
+        });
+
+        // Animation Loop
+        function animate() {
+            // Auto-increment target if not paused
+            if (!isPaused) {
+                targetScroll += scrollSpeed;
+            }
+
+            // Smoothly interpolate current towards target (Lerp)
+            // Factor 0.1 determines smoothness/speed of ease-out
+            currentScroll += (targetScroll - currentScroll) * 0.1;
+
+            // Handle Infinite Wrapping logic
+            // If we have scrolled past one full set, we reset both current and target
+            // to maintain the illusion of seamlessness without visual jumps
+            if (currentScroll >= oneSetWidth) {
+                currentScroll -= oneSetWidth;
+                targetScroll -= oneSetWidth;
+            } else if (currentScroll < 0) {
+                // For reverse scrolling (prev button)
+                currentScroll += oneSetWidth;
+                targetScroll += oneSetWidth;
+            }
+
+            beritaTrack.style.transform = `translateX(-${currentScroll}px)`;
+            requestAnimationFrame(animate);
+        }
+
+        // Pause on hover
+        beritaTrack.addEventListener('mouseenter', () => {
+            isPaused = true;
+        });
+
+        beritaTrack.addEventListener('mouseleave', () => {
+            isPaused = false;
+        });
+
+        // Arrow button handlers with Smooth Target Update
+        const beritaPrevBtn = document.getElementById('beritaPrev');
+        const beritaNextBtn = document.getElementById('beritaNext');
+
+        if (beritaPrevBtn) {
+            beritaPrevBtn.addEventListener('click', () => {
+                // Move target back by one card
+                targetScroll -= (cardWidth + gap);
+            });
+        }
+
+        if (beritaNextBtn) {
+            beritaNextBtn.addEventListener('click', () => {
+                // Move target forward by one card
+                targetScroll += (cardWidth + gap);
+            });
+        }
+
+        // Start animation loop
+        animate();
+    }
+};
+
+// Run initialization when window is fully loaded to ensure styles/dimensions are ready
+window.addEventListener('load', initBeritaCarousel);
+
 console.log('SMKN 2 Mojokerto - Website loaded successfully!');
+

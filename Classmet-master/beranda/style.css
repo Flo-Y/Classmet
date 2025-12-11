@@ -514,83 +514,90 @@ section {
     margin-right: auto;
 }
 
-/* ===== VISI MISI ===== */
-.visi-misi {
-    background: var(--bg-light);
+/* ===== VISI MISI - SIMPLE 2 COLUMN ===== */
+.visi-misi-simple {
+    background: #f9fafb;
+    padding: 100px 20px;
 }
 
-.visi-misi-grid {
+.visi-misi-grid-simple {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    margin-top: 40px;
+    align-items: stretch;
 }
 
-.visi-card,
-.misi-card {
+.visi-column,
+.misi-column {
     background: white;
     padding: 40px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition-normal);
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.visi-card:hover,
-.misi-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+.visi-column:hover,
+.misi-column:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
-.card-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.card-icon svg {
-    width: 35px;
-    height: 35px;
-    stroke: white;
-}
-
-.visi-card h3,
-.misi-card h3 {
+.column-title {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-weight: 700;
     color: var(--text-dark);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #2563eb;
 }
 
-.visi-card p,
-.misi-card p {
-    color: var(--text-light);
+/* Visi Column */
+.visi-text-simple {
+    font-size: 1.15rem;
     line-height: 1.8;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: left;
 }
 
-.misi-card ul {
+/* Misi Column */
+.misi-list-simple {
     list-style: none;
-    color: var(--text-light);
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.misi-card ul li {
-    padding: 2px 0;
-    padding-left: 30px;
-    position: relative;
+.misi-list-simple li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.misi-list-simple li svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #2563eb;
+    stroke-width: 3;
+    margin-top: 2px;
+}
+
+.misi-list-simple li span {
+    font-size: 1.15rem;
     line-height: 1.8;
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
-.misi-card ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.2rem;
+/* Responsive */
+@media (max-width: 968px) {
+    .visi-misi-grid-simple {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 /* ===== KOMPETENSI KEAHLIAN ===== */
@@ -623,6 +630,8 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
 }
 
 .kompetensi-card:hover {
@@ -635,10 +644,20 @@ section {
     height: 220px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
+    overflow: hidden;
+}
+
+.card-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-content h3 {
@@ -651,17 +670,26 @@ section {
     color: var(--text-light);
     margin-bottom: 20px;
     line-height: 1.7;
+    flex-grow: 1;
 }
 
 .card-link {
-    color: var(--primary-color);
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition-fast);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .card-link:hover {
-    color: var(--primary-dark);
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 /* ===== SAMBUTAN KEPALA SEKOLAH ===== */
@@ -708,34 +736,51 @@ section {
 
 .sambutan-content {
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.section-label {
-    color: var(--primary-color);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.sambutan-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: var(--text-dark);
+.sambutan-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
 }
 
 .kepsek-name {
-    color: var(--secondary-color);
-    font-size: 1.3rem;
+    color: #f59e0b;
+    font-size: 1.25rem;
     margin-bottom: 25px;
     font-weight: 600;
 }
 
-.sambutan-content p {
+.sambutan-excerpt {
     color: var(--text-light);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.8;
+    font-size: 1rem;
+}
+
+.btn-read-more {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-read-more:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .signature {
@@ -850,11 +895,11 @@ section {
 
 .akreditasi-text .section-label {
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.15em;
     margin-bottom: 15px;
-    font-size: 0.9rem;
+    font-size: 1.125rem;
 }
 
 .akreditasi-text h2 {
@@ -992,6 +1037,13 @@ section {
     position: relative;
 }
 
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .frame-decoration {
     position: absolute;
     top: -15px;
@@ -1055,17 +1107,15 @@ section {
     box-shadow: var(--shadow-xl);
 }
 
-.map-placeholder {
+.map-image {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    text-align: center;
-    color: white;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.map-frame:hover .map-image {
+    transform: scale(1.1);
 }
 
 .map-icon {
@@ -1164,13 +1214,81 @@ section {
     }
 }
 
-/* ===== BERITA ===== */
-.berita-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-    margin-top: 40px;
+/* ===== BERITA CAROUSEL ===== */
+.berita {
+    position: relative;
 }
+
+.berita .container {
+    position: relative;
+    padding: 0;
+    max-width: 100%;
+}
+
+.berita-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.berita-carousel-track {
+    display: flex;
+    gap: 35px;
+    width: max-content;
+    will-change: transform;
+}
+
+.berita-slider-layout {
+    position: relative;
+}
+
+/* Berita Navigation Arrows */
+.berita-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.berita-arrow:hover {
+    background: rgba(255, 255, 255, 0.45);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    color: var(--primary-dark);
+}
+
+.berita-arrow.prev {
+    left: 40px;
+}
+
+.berita-arrow.next {
+    right: 40px;
+}
+
+.berita-arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2.5;
+}
+
+
 
 .berita-card {
     background: white;
@@ -1178,6 +1296,9 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
+    flex-shrink: 0;
+    min-width: 280px;
+    max-width: 280px;
 }
 
 .berita-card:hover {
@@ -1187,12 +1308,12 @@ section {
 
 .berita-image-placeholder {
     width: 100%;
-    height: 220px;
+    height: 150px;
     background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 90%);
 }
 
 .berita-content {
-    padding: 25px;
+    padding: 15px;
 }
 
 .berita-date {
@@ -1204,8 +1325,8 @@ section {
 }
 
 .berita-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 10px;
     color: var(--text-dark);
     line-height: 1.4;
 }
@@ -1229,7 +1350,8 @@ section {
 
 .berita-cta {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 60px;
+    padding-bottom: 20px;
 }
 
 .btn-secondary {
@@ -1404,7 +1526,7 @@ section {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: #14b8a6;
+    background: #2563eb;
     color: white;
     border: none;
     border-radius: 50%;
@@ -1412,7 +1534,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
@@ -1425,9 +1547,9 @@ section {
 }
 
 .back-to-top:hover {
-    background: #0d9488;
+    background: #1e40af;
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
 }
 
 .back-to-top svg {
