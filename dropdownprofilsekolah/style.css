@@ -884,7 +884,116 @@ body {
     stroke-width: 2.5;
 }
 
+/* ===== TEACHER PROFILE ===== */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.teacher-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.teacher-img-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* Square for shorter look */
+    overflow: hidden;
+    background: #f1f5f9;
+    position: relative;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Placeholder icon when no image */
+.teacher-img-container::after {
+    content: '👤';
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.teacher-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+    position: relative;
+    z-index: 2;
+}
+
+/* Hide placeholder if image is loaded (this is a simple CSS trick, assumed empty src shows alt text or collapses)
+   Actually if src is empty, the img tag might still be there.
+   Let's just keep the container styles robust.
+*/
+
+.teacher-card:hover .teacher-img {
+    transform: scale(1.05);
+}
+
+.teacher-info {
+    padding: 15px 10px;
+}
+
+.teacher-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.teacher-subject {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 500;
+    background: #eff6ff;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    color: var(--primary-color);
+}
+
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .teacher-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .teacher-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 968px) {
     .nav-menu {
         position: fixed;
