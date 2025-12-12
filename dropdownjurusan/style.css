@@ -318,7 +318,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 64, 175, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .hero-content {
@@ -330,23 +330,17 @@ body {
 }
 
 .hero-logo {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 30px;
-    background: white;
-    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     animation: fadeInDown 1s ease;
 }
 
 .hero-logo-placeholder {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
+    display: none;
 }
 
 .hero-title {
