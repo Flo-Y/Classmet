@@ -706,7 +706,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .kepsek-image {
@@ -1021,18 +1021,21 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 40px;
-    align-items: start;
+    /* align-items removed to default to stretch */
 }
 
 /* Foto Gedung */
 .lokasi-image {
     position: relative;
+    height: 100%;
+    /* Ensure container takes full height of grid cell */
 }
 
 .image-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 100%;
+    /* Fill the container height */
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-xl);
