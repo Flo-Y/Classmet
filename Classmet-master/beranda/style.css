@@ -615,13 +615,20 @@ section {
     grid-column: span 2;
 }
 
-/* Center the last 2 cards by positioning them in the middle */
+/* Center the last 2 cards when there are 5 total */
 .kompetensi-card:nth-child(4) {
-    grid-column: 2 / 4;
+    grid-column: 2 / span 2;
 }
 
-.kompetensi-card:nth-child(5) {
-    grid-column: 4 / 6;
+/* Responsive Tablet */
+@media (max-width: 992px) {
+    .kompetensi-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .kompetensi-card:nth-child(4) {
+        grid-column: span 2;
+    }
 }
 
 .kompetensi-card {
@@ -1217,16 +1224,16 @@ section {
 /* ===== NEWS SECTION (MAGAZINE STYLE) ===== */
 .news-section {
     background: var(--bg-light);
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 /* Featured News */
 .featured-news {
     position: relative;
-    margin-top: 50px;
+    margin-top: 35px;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    height: 500px;
+    height: 350px;
     box-shadow: var(--shadow-xl);
     transition: var(--transition-normal);
 }
@@ -1272,7 +1279,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 50px;
+    padding: 35px;
     color: white;
     z-index: 2;
 }
@@ -1301,19 +1308,19 @@ section {
 }
 
 .featured-content h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     line-height: 1.3;
-    margin: 20px 0;
+    margin: 15px 0;
     color: white;
     font-weight: 700;
 }
 
 .featured-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 25px;
-    max-width: 800px;
+    margin-bottom: 20px;
+    max-width: 700px;
 }
 
 .read-more-btn {
@@ -1350,7 +1357,7 @@ section {
 
 /* News List */
 .news-list {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -1358,9 +1365,9 @@ section {
 
 .news-item {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 30px;
-    padding: 30px 0;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    padding: 20px 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
     transition: var(--transition-normal);
     position: relative;

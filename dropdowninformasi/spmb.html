@@ -4,14 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMKN 2 MOJOKERTO - Beranda</title>
-    <meta name="description"
-        content="Website resmi SMKN 2 Mojokerto - Sekolah Menengah Kejuruan terkemuka dengan berbagai kompetensi keahlian">
-    <link rel="stylesheet" href="style.css">
+    <title>PPDB - SMKN 2 Mojokerto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Classmet-master/beranda/style.css">
+    <style>
+        /* Specific styles for SPMB page content */
+        /* Note: Navbar and Footer styles are now inherited from style.css */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        /* Removed inline Navbar styles to use style.css */
+
+        /* Main Content */
+        .main-content {
+            margin-top: 100px;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .page-header .underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            margin: 0 auto;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 60px;
+            border-left: 5px solid #2563eb;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+        }
+
+        .info-box p {
+            font-size: 1.05rem;
+            color: #4b5563;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .info-box a {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .info-box a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* Poster Section */
+        .poster-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 60px;
+        }
+
+        .poster-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .poster-item {
+            margin-bottom: 40px;
+        }
+
+        .poster-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Removed inline Footer styles to use style.css */
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .info-box {
+                padding: 30px 25px;
+            }
+
+            .info-box p {
+                font-size: 1rem;
+            }
+
+            .nav-brand span {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .poster-container {
+                padding: 0 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +145,8 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <div class="logo-container">
-                    <img src="images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto" class="logo">
+                    <img src="../Classmet-master/beranda/images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto"
+                        class="logo">
                 </div>
                 <div class="school-name">
                     <span class="school-name-top">SMK NEGERI 2</span>
@@ -29,22 +155,20 @@
             </div>
 
             <div class="nav-menu" id="navMenu">
-                <a href="../Classmet-master/beranda/index.html" class="nav-link">Beranda</a>
+                <a href="../Classmet-master/beranda/index.html#beranda" class="nav-link">Beranda</a>
 
-                <!-- Profil Sekolah Dropdown -->
                 <div class="nav-dropdown">
-                    <a href="#profil" class="nav-link active">Profil Sekolah</a>
+                    <a href="../Classmet-master/beranda/index.html#profil" class="nav-link">Profil Sekolah</a>
                     <div class="dropdown-content">
-                        <a href="sejarah.html">Sejarah</a>
-                        <a href="fasilitas.html">Fasilitas Sekolah</a>
-                        <a href="profil-guru.html">Profil Guru</a>
-                        <a href="denah.html">Denah Sekolah</a>
+                        <a href="../dropdownprofilsekolah/sejarah.html">Sejarah</a>
+                        <a href="../dropdownprofilsekolah/fasilitas.html">Fasilitas Sekolah</a>
+                        <a href="../dropdownprofilsekolah/profil-guru.html">Profil Guru</a>
+                        <a href="../dropdownprofilsekolah/denah.html">Denah Sekolah</a>
                     </div>
                 </div>
 
-                <!-- Kompetensi Keahlian Dropdown -->
                 <div class="nav-dropdown">
-                    <a href="#kompetensi" class="nav-link">Kompetensi Keahlian</a>
+                    <a href="../Classmet-master/beranda/index.html#kompetensi" class="nav-link">Kompetensi Keahlian</a>
                     <div class="dropdown-content">
                         <a href="../dropdownjurusan/aphp.html">Agribisnis Pengolahan Hasil Tani</a>
                         <a href="../dropdownjurusan/dkv.html">Desain Komunikasi Visual</a>
@@ -54,13 +178,12 @@
                     </div>
                 </div>
 
-                <!-- Informasi Dropdown -->
                 <div class="nav-dropdown">
-                    <a href="#informasi" class="nav-link">Informasi</a>
+                    <a href="#informasi" class="nav-link active">Informasi</a>
                     <div class="dropdown-content">
-                        <a href="../dropdowninformasi/spmb.html">Informasi SPMB</a>
-                        <a href="../dropdowninformasi/prestasi.html">Prestasi</a>
-                        <a href="../dropdowninformasi/beritaartikel.html">Berita dan Artikel</a>
+                        <a href="spmb.html">Informasi SPMB</a>
+                        <a href="prestasi.html">Prestasi</a>
+                        <a href="beritaartikel.html">Berita dan Artikel</a>
                     </div>
                 </div>
 
@@ -75,43 +198,43 @@
         </div>
     </nav>
 
-    </nav>
-
     <!-- Main Content -->
     <main class="main-content">
-        <section class="facility-section">
-            <div class="container">
-                <h2 class="facility-title">Denah Sekolah</h2>
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Penerimaan Peserta Didik Baru</h1>
+            <div class="underline"></div>
+        </div>
 
-                <div class="denah-card">
-                    <div class="denah-image-container">
-                        <img src="images/denahSMK.png" alt="Denah Lokasi SMKN 2 Mojokerto" class="denah-img">
-                        <div class="denah-overlay">
-                            <span>Klik untuk memperbesar</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Info Text -->
+        <div class="info-box">
+            <p>
+                Penerimaan Peserta Didik Baru di SMK Negeri 2 Mojokerto mengikuti seluruh ketentuan yang telah
+                dijabarkan pada web resmi penerimaan peserta didik baru SMAN/SMKN di Jawa Timur yaitu <a
+                    href="https://www.ppdbjatim.net" target="_blank" rel="noopener noreferrer">www.ppdbjatim.net</a>,
+                silahkan memperhatikan timeline jadwal penerimaan
+                peserta didik baru di SMK Negeri 2 Mojokerto seperti pada flyer berikut ini:
+            </p>
+        </div>
 
-                <div class="denah-actions">
-                    <a href="images/denahSMK.png" target="_blank" class="btn-download">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download Denah
-                    </a>
-                </div>
+        <!-- Poster Title -->
+        <h2 class="poster-title">Timeline & Informasi PPDB</h2>
+
+        <!-- Poster Container -->
+        <div class="poster-container">
+            <div class="poster-item">
+                <img src="spmb1.jpg" alt="Poster PPDB 1">
             </div>
-        </section>
-    </main>
 
-    <!-- Lightbox Modal for Map -->
-    <div id="mapModal" class="lightbox-modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="fullMapImage">
-        <div class="caption">Denah SMKN 2 Mojokerto</div>
-    </div>
+            <div class="poster-item">
+                <img src="spmb2.jpg" alt="Poster PPDB 2">
+            </div>
+
+            <div class="poster-item">
+                <img src="spmb3.jpg" alt="Poster PPDB 3">
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" id="kontak">
@@ -120,7 +243,8 @@
                 <div class="footer-grid">
                     <div class="footer-col">
                         <div class="footer-brand">
-                            <img src="images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto" class="footer-logo">
+                            <img src="../Classmet-master/beranda/images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto"
+                                class="footer-logo">
                             <h3>SMKN 2 MOJOKERTO</h3>
                         </div>
                         <p>Kami siap melayani masyarakat pendidikan dan pembelajaran berbasis budaya Kerja, Disiplin dan
@@ -153,11 +277,11 @@
                     <div class="footer-col">
                         <h4>Tautan Cepat</h4>
                         <ul class="footer-links">
-                            <li><a href="#beranda">Beranda</a></li>
-                            <li><a href="#profil">Profil Sekolah</a></li>
-                            <li><a href="#kompetensi">Kompetensi Keahlian</a></li>
-                            <li><a href="#informasi">Informasi</a></li>
-                            <li><a href="#kontak">Kontak</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#beranda">Beranda</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#profil">Profil Sekolah</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#kompetensi">Kompetensi Keahlian</a></li>
+                            <li><a href="../Classmet-master/beranda/index.html#informasi">Informasi</a></li>
+                            <li><a href="../Classmet-master/beranda/kontak.html">Kontak</a></li>
                         </ul>
                     </div>
 
@@ -207,7 +331,8 @@
         </svg>
     </button>
 
-    <script src="script.js"></script>
+    <script src="../Classmet-master/beranda/script.js"></script>
+
 </body>
 
 </html>
