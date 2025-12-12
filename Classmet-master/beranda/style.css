@@ -357,7 +357,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
     z-index: 1;
 }
 
@@ -517,7 +517,7 @@ section {
 /* ===== VISI MISI - SIMPLE 2 COLUMN ===== */
 .visi-misi-simple {
     background: #f9fafb;
-    padding: 100px 20px;
+    padding: 30px 20px 30px 20px;
 }
 
 .visi-misi-grid-simple {
@@ -556,7 +556,7 @@ section {
 /* Visi Column */
 .visi-text-simple {
     font-size: 1.15rem;
-    line-height: 1.8;
+    line-height: 1.5;
     color: var(--text-dark);
     font-weight: 500;
     text-align: left;
@@ -564,32 +564,24 @@ section {
 
 /* Misi Column */
 .misi-list-simple {
-    list-style: none;
+    list-style: decimal;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+    padding-left: 25px;
 }
 
 .misi-list-simple li {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.misi-list-simple li svg {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    color: #2563eb;
-    stroke-width: 3;
-    margin-top: 2px;
+    display: list-item;
+    padding-left: 10px;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1.15rem;
 }
 
 .misi-list-simple li span {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text-dark);
-    font-weight: 500;
+    line-height: 1.5;
+    display: block;
 }
 
 /* Responsive */
@@ -601,6 +593,11 @@ section {
 }
 
 /* ===== KOMPETENSI KEAHLIAN ===== */
+/* ===== KOMPETENSI KEAHLIAN ===== */
+.kompetensi {
+    padding: 30px 20px 80px 20px;
+}
+
 .kompetensi-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -657,7 +654,7 @@ section {
 .card-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .card-content {
@@ -702,6 +699,7 @@ section {
 /* ===== SAMBUTAN KEPALA SEKOLAH ===== */
 .sambutan-kepsek {
     background: var(--bg-light);
+    padding: 30px 20px 30px 20px;
 }
 
 .sambutan-grid {
@@ -806,10 +804,12 @@ section {
 }
 
 /* ===== AKREDITASI ===== */
+
 .akreditasi {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
+    padding: 30px 20px;
 }
 
 .akreditasi::before {
@@ -853,8 +853,8 @@ section {
 
 .badge-circle {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
 }
 
 .badge-inner {
@@ -862,8 +862,8 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
+    width: 170px;
+    height: 170px;
     background: white;
     border-radius: 50%;
     display: flex;
@@ -887,7 +887,7 @@ section {
 }
 
 .grade {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 900;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -906,20 +906,20 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 15px;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 .akreditasi-text h2 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     font-weight: 700;
 }
 
 .akreditasi-text>p {
     font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
+    line-height: 1.6;
+    margin-bottom: 25px;
     color: rgba(255, 255, 255, 0.95);
 }
 
@@ -935,7 +935,7 @@ section {
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 15px;
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: var(--transition-normal);
@@ -1013,6 +1013,7 @@ section {
 /* ===== LOKASI SEKOLAH ===== */
 .lokasi-sekolah {
     background: var(--bg-light);
+    padding: 30px 20px;
 }
 
 .lokasi-grid {
@@ -1031,7 +1032,7 @@ section {
 .image-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-xl);
@@ -1101,7 +1102,7 @@ section {
 .map-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -1526,7 +1527,7 @@ section {
 
 /* ===== WELCOME SECTION ===== */
 .welcome-section {
-    padding: 80px 0;
+    padding: 80px 0 30px 0;
     text-align: center;
     background: #ffffff;
 }
@@ -1602,7 +1603,7 @@ section {
 
 /* Color Variants */
 .card-blue {
-    background-color: #e0fbfd;
+    background-color: #dbeafe;
 }
 
 .card-blue .feature-icon svg {
