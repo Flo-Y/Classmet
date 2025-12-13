@@ -706,7 +706,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .kepsek-image {
@@ -1546,8 +1546,8 @@ section {
     font-weight: 700;
     line-height: 1.3;
     margin: 0;
-    color: #0d5f5f;
-    /* Dark teal color */
+    color: var(--text-dark);
+    /* Standard dark color */
 }
 
 .welcome-text {
