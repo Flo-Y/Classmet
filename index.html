@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 2 MOJOKERTO - Beranda</title>
+    <meta name="description"
+        content="Website resmi SMKN 2 Mojokerto - Sekolah Menengah Kejuruan terkemuka dengan berbagai kompetensi keahlian">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <img src="images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto" class="logo">
+                </div>
+                <div class="school-name">
+                    <span class="school-name-top">SMK NEGERI 2</span>
+                    <span class="school-name-bottom">KOTA MOJOKERTO</span>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+
+                <!-- Profil Sekolah Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#profil" class="nav-link">Profil Sekolah</a>
+                    <div class="dropdown-content">
+                        <a href="../../dropdownprofilsekolah/sejarah.html">Sejarah</a>
+                        <a href="../../dropdownprofilsekolah/fasilitas.html">Fasilitas Sekolah</a>
+                        <a href="../../dropdownprofilsekolah/profil-guru.html">Profil Guru</a>
+                        <a href="../../dropdownprofilsekolah/denah.html">Denah Sekolah</a>
+                    </div>
+                </div>
+
+                <!-- Kompetensi Keahlian Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#kompetensi" class="nav-link">Kompetensi Keahlian</a>
+                    <div class="dropdown-content">
+                        <a href="../../dropdownjurusan/aphp.html">Agribisnis Pengolahan Hasil Pertanian</a>
+                        <a href="../../dropdownjurusan/dkv.html">Desain Komunikasi Visual</a>
+                        <a href="../../dropdownjurusan/kuliner.html">Kuliner</a>
+                        <a href="../../dropdownjurusan/lps.html">Layanan Perbankan Syariah</a>
+                        <a href="../../dropdownjurusan/rpl.html">Rekayasa Perangkat Lunak</a>
+                    </div>
+                </div>
+
+                <!-- Informasi Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#informasi" class="nav-link">Informasi</a>
+                    <div class="dropdown-content">
+                        <a href="../../dropdowninformasi/spmb.html">Informasi SPMB</a>
+                        <a href="../../dropdowninformasi/prestasi.html">Prestasi</a>
+                        <a href="../../dropdowninformasi/beritaartikel.html">Berita dan Artikel</a>
+
+                    </div>
+                </div>
+
+                <a href="kontak.html" class="nav-link">Kontak</a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner" id="beranda">
+        <!-- Carousel Container -->
+        <div class="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="images/hero1.jpg" alt="Slide 1" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="images/HERO2.jpg" alt="Slide 2" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="images/HERO3.jpg" alt="Slide 3" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+                <img src="images/HERO4.jpg" alt="Slide 4" class="slide-image">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content (stays on top) -->
+        <div class="hero-content">
+            <h1 class="hero-title">WEBSITE SMKN 2 MOJOKERTO</h1>
+            <p class="hero-subtitle">Membentuk Generasi Unggul, Berkarakter, dan Profesional</p>
+            <a href="#welcome" class="hero-btn">Jelajahi Lebih Lanjut</a>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev" id="prevSlide" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-arrow next" id="nextSlide" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Welcome Section -->
+    <section class="welcome-section" id="welcome">
+        <div class="container">
+            <div class="welcome-content">
+                <h2 class="welcome-subtitle">Selamat datang</h2>
+                <h1 class="welcome-title">di SMK Negeri 2 Mojokerto</h1>
+                <p class="welcome-text">Bersama kami, bentuk skill masa depan dan jadilah tenaga profesional unggulan.
+                </p>
+
+                <div class="welcome-features-grid">
+                    <!-- Item 1: SPMB -->
+                    <a href="../../dropdowninformasi/spmb.html" class="feature-card card-blue">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                </path>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            </svg>
+                        </div>
+                        <h3>SPMB</h3>
+                    </a>
+
+                    <!-- Item 2: Fasilitas -->
+                    <a href="../../dropdownprofilsekolah/fasilitas.html" class="feature-card card-yellow">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Fasilitas</h3>
+                    </a>
+
+                    <!-- Item 3: Pengajar Profesional -->
+                    <a href="../../dropdownprofilsekolah/profil-guru.html" class="feature-card card-red">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Pengajar Profesional</h3>
+                    </a>
+
+                    <!-- Item 4: Kompetensi Keahlian -->
+                    <a href="#kompetensi" class="feature-card card-purple">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Kompetensi Keahlian</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi Misi -->
+    <section class="visi-misi-simple" id="visi-misi">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Visi & Misi</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="visi-misi-grid-simple">
+                <!-- Kolom Kiri: VISI -->
+                <div class="visi-column">
+                    <h2 class="column-title">Visi</h2>
+                    <p class="visi-text-simple">Mewujudkan SMK Negeri 2 Mojokerto sebagai Pusat Pendidikan dan Pelatihan
+                        Kejuruan Berkualitas yang Menghasilkan Tamatan Beriman dan Bertakwa, Profesional, Berkarakter
+                        Kebangsaan, Menguasai IPTEK, serta Peduli dan Berbudaya Lingkungan Hidup. </p>
+                </div>
+
+                <!-- Kolom Kanan: MISI -->
+                <div class="misi-column">
+                    <h2 class="column-title">Misi</h2>
+                    <ol class="misi-list-simple">
+                        <li>
+                            <span>Menyelenggarakan pendidikan berbasis kompetensi dan karakter yang unggul</span>
+                        </li>
+                        <li>
+                            <span>Mengembangkan potensi peserta didik secara optimal dan profesional</span>
+                        </li>
+                        <li>
+                            <span>Membangun kemitraan dengan dunia usaha dan industri</span>
+                        </li>
+                        <li>
+                            <span>Menerapkan sistem manajemen mutu untuk peningkatan berkelanjutan</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sambutan Kepala Sekolah -->
+    <section class="sambutan-kepsek" id="profil">
+        <div class="container">
+            <div class="sambutan-grid">
+                <div class="kepsek-image">
+                    <div class="image-placeholder">
+                        <img src="images/kepsek.jpg" alt="Kepala Sekolah" class="kepsek-photo">
+                    </div>
+                    <div class="image-decoration"></div>
+                </div>
+
+                <div class="sambutan-content">
+                    <h2 class="sambutan-title">SAMBUTAN KEPALA SEKOLAH</h2>
+                    <p class="kepsek-name">Drs. Akhmad Muklason, M.M.Pd</p>
+
+                    <p class="sambutan-excerpt">Selamat datang di website Sekolah Menengah Kejuruan Negeri (SMKN) 2 Kota
+                        Mojokerto. Saya berharap website ini dapat menjadi sarana penyedia informasi
+                        mengenai profil, kegiatan, serta fasilitas di sekolah kami serta sebagai sarana
+                        pembelajaran bagi siswa dan guru. Semoga website ini dapat menjadi wahana
+                        interaksi yang positif, sehingga dapat menjalin silaturahmi yang erat di segala
+                        unsur stake holder sekolah. Tentunya informasi dan website sekolah kami ini
+                        masih terdapat banyak kekurangan, oleh karena itu kepada seluruh civitas
+                        akademika dan masyarakat umum dapat memberikan saran dan kritik yang
+                        membangun demi kemajuan website ini lebih lanjut.</p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetensi Keahlian -->
+    <section class="kompetensi" id="kompetensi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kompetensi Keahlian</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Pilih Program Keahlian yang Sesuai dengan Minat dan Bakatmu</p>
+            </div>
+
+            <div class="kompetensi-grid">
+                <!-- 1. Agribisnis Pengolahan Hasil Tani -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <img src="images/ph.png" alt="Agribisnis Pengolahan Hasil Pertanian">
+                    </div>
+                    <div class="card-content">
+                        <h3>Agribisnis Pengolahan Hasil Pertanian</h3>
+
+                        </p>
+                        <a href="../../dropdownjurusan/aphp.html" class="card-link">Pelajari Lebih Lanjut </a>
+                    </div>
+                </div>
+
+                <!-- 2. Desain Komunikasi Visual -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <img src="images/bannerdkv.jpg" alt="Desain Komunikasi Visual">
+                    </div>
+                    <div class="card-content">
+                        <h3>Desain Komunikasi Visual</h3>
+
+                        </p>
+                        <a href="../../dropdownjurusan/dkv.html" class="card-link">Pelajari Lebih Lanjut </a>
+                    </div>
+                </div>
+
+                <!-- 3. Kuliner -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <img src="images/kuli.png" alt="Kuliner">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kuliner</h3>
+
+                        </p>
+                        <a href="../../dropdownjurusan/kuliner.html" class="card-link">Pelajari Lebih Lanjut </a>
+                    </div>
+                </div>
+
+                <!-- 4. Layanan Perbankan Syariah -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <img src="images/Bannerps.jpg" alt="Layanan Perbankan Syariah">
+                    </div>
+                    <div class="card-content">
+                        <h3>Layanan Perbankan Syariah</h3>
+
+                        </p>
+                        <a href="../../dropdownjurusan/lps.html" class="card-link">Pelajari Lebih Lanjut </a>
+                    </div>
+                </div>
+
+                <!-- 5. Rekayasa Perangkat Lunak -->
+                <div class="kompetensi-card">
+                    <div class="card-image-placeholder">
+                        <img src="images/bannerrpl.jpg" alt="Rekayasa Perangkat Lunak">
+                    </div>
+                    <div class="card-content">
+                        <h3>Rekayasa Perangkat Lunak</h3>
+
+                        </p>
+                        <a href="../../dropdownjurusan/rpl.html" class="card-link">Pelajari Lebih Lanjut </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Akreditasi Sekolah -->
+    <section class="akreditasi" id="akreditasi">
+        <div class="container">
+            <div class="akreditasi-content">
+                <div class="akreditasi-badge">
+                    <div class="badge-circle">
+                        <div class="badge-inner">
+                            <span class="grade">A</span>
+                        </div>
+                        <div class="badge-ring"></div>
+                    </div>
+                </div>
+                <div class="akreditasi-text">
+                    <div class="section-label">Akreditasi</div>
+                    <h2>Terakreditasi "A"</h2>
+                    <p>Berdasarkan Surat Keputusan Badan Akreditasi Nasional Sekolah/Madrasah (BAN-S/M), SMKN 2
+                        Mojokerto telah memperoleh akreditasi A yang menunjukkan komitmen kami dalam memberikan
+                        pendidikan berkualitas tinggi.</p>
+                    <div class="akreditasi-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Kualitas Terjamin</h4>
+                                <p>Standar pendidikan nasional</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Fasilitas Lengkap</h4>
+                                <p>Sarana & prasarana memadai</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Tenaga Pendidik</h4>
+                                <p>Guru profesional & berpengalaman</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi Sekolah -->
+    <section class="lokasi-sekolah" id="lokasi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lokasi Sekolah</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">SMKN 2 Mojokerto terletak di pusat kota yang meliki lokasi strategis</p>
+            </div>
+
+            <div class="lokasi-grid">
+                <!-- Foto Gedung Sekolah -->
+                <div class="lokasi-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <img src="images/gedungg.jpg" alt="Gedung Sekolah">
+                        </div>
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="lokasi-map">
+                    <a href="https://www.google.com/maps/place/SMK+Negeri+2+Kota+Mojokerto/@-7.4655097,112.42611,15.7z/data=!4m6!3m5!1s0x2e78120b57f1e203:0x65ef2d4ecdeb1643!8m2!3d-7.4645961!4d112.4233275!16s%2Fg%2F11bwf8s0_k?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" rel="noopener noreferrer" class="map-link">
+                        <div class="map-frame">
+                            <img src="images/mapSMK.png" alt="Lokasi Sekolah" class="map-image">
+                            <div class="map-overlay">
+                                <span>Buka Peta </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="lokasi-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <div>
+                                <h4>
+                                    <p>Jl. Raya Pulorejo, Kota Mojokerto, Jawa Timur
+                                        61325</p>
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Berita & Informasi Section -->
+    <section class="news-section" id="berita">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Berita & Informasi Terkini</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Update terbaru seputar kegiatan dan prestasi SMKN 2 Mojokerto</p>
+            </div>
+
+
+            <!-- Featured News -->
+            <div class="featured-news">
+                <div class="featured-news-image">
+                    <img src="../../berita/imgberita/bp1.jpg" alt="Featured News">
+                    <div class="featured-overlay"></div>
+                </div>
+                <div class="featured-content">
+                    <span class="news-date">20 Oktober 2024</span>
+                    <h2>Lolos 10 Besar! Tim Maja Force RPL Siap Raih Emas dalam Festival MEA Tingkat Nasional</h2>
+                    <p>Luar Biasa! Bulan Oktober 2024 menjadi penanda kebanggaan SMKN 2 Mojokerto. Tim Maja Force dari
+                        jurusan RPL berhasil menorehkan prestasi tertinggi dalam lomba MEA (Madani Enterpreneur
+                        Academy), lolos 10 besar dan siap meraih emas di tingkat Nasional.</p>
+                    <a href="../../berita/b-p1.html" class="read-more-btn">
+                        Baca Selengkapnya
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- News List -->
+            <div class="news-list">
+                <!-- News Item 1 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="../../berita/imgberita/b1.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">23 Juli 2025</span>
+                        </div>
+                        <h3>SMK Negeri 2 Mojokerto Sukses Laksanakan Rekrutmen Pramuniaga Toko Emas Wahyu Redjo</h3>
+                        <p>Kegiatan Rekrutmen Pramuniaga Toko emas Wahyu Redjo yang bekerjasama dengan BKK SMK Negeri 2
+                            dilaksanakan pada hari Rabu tanggal 23 Juli 2025 oleh siswa kelas XII.</p>
+                        <a href="../../berita/b1.html" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/beritaaphp.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">5 Desember 2025</span>
+                        </div>
+                        <h3>Pendaftaran Prakerin Gelombang 2 Tahun Ajaran 2025/2026</h3>
+                        <p>Dibuka pendaftaran praktek kerja industri gelombang kedua untuk siswa kelas XI. Informasi
+                            lengkap dapat dilihat di pengumuman resmi sekolah.</p>
+                        <a href="#" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/download.jpg" alt="News">
+                        <div class="news-image-overlay"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">1 Desember 2025</span>
+                        </div>
+                        <h3>Peringatan Hari Guru Nasional dengan Berbagai Kegiatan Menarik</h3>
+                        <p>Seluruh warga sekolah merayakan Hari Guru Nasional dengan serangkaian kegiatan apresiasi
+                            untuk para guru dan tenaga pendidik.</p>
+                        <a href="#" class="news-link">
+                            Selengkapnya
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="news-view-all">
+                <a href="../../dropdowninformasi/beritaartikel.html" class="btn-view-all">
+                    Lihat Semua Berita
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="kontak">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="images/logo-sekolah.png" alt="Logo SMKN 2 Mojokerto" class="footer-logo">
+                            <h3>SMKN 2 MOJOKERTO</h3>
+                        </div>
+                        <p>Kami siap melayani masyarakat pendidikan dan pembelajaran berbasis budaya Kerja, Disiplin dan
+                            Berprestasi.</p>
+                        <p></p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/smkn2mojokerto/?locale=id_ID" class="social-link"
+                                aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/smkn_2_mojokerto/?hl=en" class="social-link"
+                                aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCqiKo-o2OjwsAdJP58TpiUw" class="social-link"
+                                aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Tautan Cepat</h4>
+                        <ul class="footer-links">
+                            <li><a href="#beranda">Beranda</a></li>
+                            <li><a href="#profil">Profil Sekolah</a></li>
+                            <li><a href="#kompetensi">Kompetensi Keahlian</a></li>
+                            <li><a href="#berita">Informasi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Kontak Kami</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Jl. Raya Pulorejo, Mergelo, Pulorejo, Kec. Prajurit Kulon, Kota Mojokerto, Jawa
+                                    Timur 61325</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <span>(0321) 387356</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span>@smkn2mojokerto.sch.id</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; SMKN 2 Mojokerto.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
